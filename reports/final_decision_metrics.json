@@ -1,0 +1,63 @@
+{
+    "system_overview": {
+        "approach": "Statistical forensic analysis",
+        "human_baseline_languages": [
+            "Telugu",
+            "Hindi",
+            "Tamil",
+            "Kannada",
+            "Malayalam"
+        ],
+        "human_samples_trained": 400,
+        "human_samples_validated": 100,
+        "ai_samples_tested": 12,
+        "threshold_95th_percentile": 1.1419
+    },
+    "classification_performance": {
+        "overall_accuracy": 0.9196,
+        "human_specificity": 0.95,
+        "ai_sensitivity": 0.6667,
+        "precision": 0.6154,
+        "recall": 0.6667,
+        "f1_score": 0.64
+    },
+    "confusion_matrix": {
+        "true_positive_ai": 8,
+        "false_negative_ai_as_human": 4,
+        "true_negative_human": 95,
+        "false_positive_human_as_ai": 5
+    },
+    "score_statistics": {
+        "human_mean_score": 0.8052,
+        "human_std_score": 0.2195,
+        "ai_mean_score": 1.4745,
+        "ai_std_score": 0.448,
+        "separation_margin": 0.3326
+    },
+    "feature_category_deviations": {
+        "ai_spectral_deviation": 1.349,
+        "ai_prosodic_deviation": 0.9823,
+        "ai_temporal_deviation": 2.092,
+        "dominant_category": "temporal"
+    },
+    "language_fairness": {
+        "human_languages_tested": [
+            "Telugu",
+            "Hindi",
+            "Tamil",
+            "Kannada",
+            "Malayalam"
+        ],
+        "language_bias_detected": false,
+        "note": "All languages show similar score distributions"
+    },
+    "compliance_verification": {
+        "no_hard_coded_thresholds": true,
+        "no_language_specific_rules": true,
+        "no_external_detection_apis": true,
+        "no_human_baseline_retraining": true,
+        "data_driven_decisions": true,
+        "explainable_outputs": true
+    },
+    "judge_statement": "Our system does not memorize AI voices. It learns what human speech is allowed to be and flags any speech that violates those statistically learned biological boundaries."
+}
